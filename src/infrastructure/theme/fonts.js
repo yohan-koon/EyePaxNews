@@ -1,3 +1,14 @@
+export const fontFamilies = {
+  NewYorkBold: 'NewYorkMedium-Bold',
+  NewYorkSemiBold: 'NewYorkMedium-Semibold',
+  NunitoBlack: 'Nunito-Black',
+  NunitoBold: 'Nunito-Bold',
+  NunitoExtraBold: 'Nunito-ExtraBold',
+  NunitoLight: 'Nunito-Light',
+  NunitoRegular: 'Nunito-Regular',
+  NunitoSemiBold: 'Nunito-SemiBold',
+};
+
 export const fonts = {
   body: 'Oswald_400Regular',
   heading: 'Lato_400Regular',

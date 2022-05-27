@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* EyePaxNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* EyePaxNewsTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-EyePaxNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-EyePaxNews.a */; };
+		138C5FE13CC546C8AFED2579 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 956C07DC709D4430BB605B2E /* Nunito-Black.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		193D0B3CF69D453BA16163A8 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5721D8B953F849F999BC94AE /* Nunito-Bold.ttf */; };
+		5168667A78E545C9A06A1967 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97C7C5FD8D3F44BBAD2C845C /* Nunito-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-EyePaxNews-EyePaxNewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-EyePaxNews-EyePaxNewsTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8BC6B48AC23B471E9CA14282 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2C1E6D5344B16A358D226 /* Nunito-Regular.ttf */; };
+		8D4D07C49DA94534B68FFE82 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BC2F8091C0C488983CA17F2 /* Nunito-ExtraBold.ttf */; };
+		E41AEEAC38794F558DC3C26B /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE573A9C37D5471D9940413F /* Nunito-SemiBold.ttf */; };
+		C626C0039E5048E2BD5C1430 /* NewYorkMedium-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1219AD79BDE4255ABFB484E /* NewYorkMedium-Bold.ttf */; };
+		E71583FC85324F59A41EE92C /* NewYorkMedium-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12452AADCB6C4D769E63AD88 /* NewYorkMedium-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +38,7 @@
 		00E356EE1AD99517003FC87E /* EyePaxNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyePaxNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* EyePaxNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyePaxNewsTests.m; sourceTree = "<group>"; };
+		0AD2C1E6D5344B16A358D226 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* EyePaxNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyePaxNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EyePaxNews/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = EyePaxNews/AppDelegate.mm; sourceTree = "<group>"; };
@@ -39,11 +48,20 @@
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-EyePaxNews-EyePaxNewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EyePaxNews-EyePaxNewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-EyePaxNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyePaxNews.debug.xcconfig"; path = "Target Support Files/Pods-EyePaxNews/Pods-EyePaxNews.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-EyePaxNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyePaxNews.release.xcconfig"; path = "Target Support Files/Pods-EyePaxNews/Pods-EyePaxNews.release.xcconfig"; sourceTree = "<group>"; };
+		5721D8B953F849F999BC94AE /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-EyePaxNews-EyePaxNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyePaxNews-EyePaxNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-EyePaxNews-EyePaxNewsTests/Pods-EyePaxNews-EyePaxNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-EyePaxNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EyePaxNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC2F8091C0C488983CA17F2 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EyePaxNews/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-EyePaxNews-EyePaxNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyePaxNews-EyePaxNewsTests.release.xcconfig"; path = "Target Support Files/Pods-EyePaxNews-EyePaxNewsTests/Pods-EyePaxNews-EyePaxNewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		956C07DC709D4430BB605B2E /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
+		97C7C5FD8D3F44BBAD2C845C /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
+		AAF2B66FEB43403B965F51C5 /* NewYork-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NewYork-Semibold.ttf"; path = "../assets/fonts/NewYork-Semibold.ttf"; sourceTree = "<group>"; };
+		AED5212120B24059A3DEA891 /* NewYork-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NewYork-Bold.ttf"; path = "../assets/fonts/NewYork-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EE573A9C37D5471D9940413F /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		F1219AD79BDE4255ABFB484E /* NewYorkMedium-Bold.ttf */ = {isa = PBXFileReference; name = "NewYorkMedium-Bold.ttf"; path = "../assets/fonts/NewYorkMedium-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12452AADCB6C4D769E63AD88 /* NewYorkMedium-Semibold.ttf */ = {isa = PBXFileReference; name = "NewYorkMedium-Semibold.ttf"; path = "../assets/fonts/NewYorkMedium-Semibold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				8ECBDFBC52754D0B9F5D0497 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +154,23 @@
 				00E356EE1AD99517003FC87E /* EyePaxNewsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8ECBDFBC52754D0B9F5D0497 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AED5212120B24059A3DEA891 /* NewYork-Bold.ttf */,
+				AAF2B66FEB43403B965F51C5 /* NewYork-Semibold.ttf */,
+				956C07DC709D4430BB605B2E /* Nunito-Black.ttf */,
+				5721D8B953F849F999BC94AE /* Nunito-Bold.ttf */,
+				7BC2F8091C0C488983CA17F2 /* Nunito-ExtraBold.ttf */,
+				97C7C5FD8D3F44BBAD2C845C /* Nunito-Light.ttf */,
+				0AD2C1E6D5344B16A358D226 /* Nunito-Regular.ttf */,
+				EE573A9C37D5471D9940413F /* Nunito-SemiBold.ttf */,
+				F1219AD79BDE4255ABFB484E /* NewYorkMedium-Bold.ttf */,
+				12452AADCB6C4D769E63AD88 /* NewYorkMedium-Semibold.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -244,6 +280,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				138C5FE13CC546C8AFED2579 /* Nunito-Black.ttf in Resources */,
+				193D0B3CF69D453BA16163A8 /* Nunito-Bold.ttf in Resources */,
+				8D4D07C49DA94534B68FFE82 /* Nunito-ExtraBold.ttf in Resources */,
+				5168667A78E545C9A06A1967 /* Nunito-Light.ttf in Resources */,
+				8BC6B48AC23B471E9CA14282 /* Nunito-Regular.ttf in Resources */,
+				E41AEEAC38794F558DC3C26B /* Nunito-SemiBold.ttf in Resources */,
+				C626C0039E5048E2BD5C1430 /* NewYorkMedium-Bold.ttf in Resources */,
+				E71583FC85324F59A41EE92C /* NewYorkMedium-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
