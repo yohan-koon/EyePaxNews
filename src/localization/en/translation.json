@@ -1,0 +1,8 @@
+{
+  "commonScope": {
+      "appName": "EyePax News"
+  },
+  "authScope": {
+      "signInWithGoogle": "Sign in with google for EyePax News"
+  }
+}
