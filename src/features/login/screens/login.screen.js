@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import {GoogleSigninButton} from '@react-native-google-signin/google-signin';
 
 import Snackbar from 'react-native-snackbar';
+import {useTranslation} from 'react-i18next';
 
 import {ThemeContext} from 'styled-components';
 import {AuthContext} from '../../../contexts/auth.context';
@@ -9,17 +10,9 @@ import {Screen} from '../../../components/screen/screen.component';
 
 import {Wrapper, AppTitle, SignInLabel, AuthButton} from './login.styles';
 
-// GoogleSignin.configure({
-//   webClientId:
-//     '791207290681-le69j0stf5vas1t3p8fdtqe1b0ikgo9e.apps.googleusercontent.com',
-// });
-// GoogleSignin.configure({
-//   webClientId:
-//     '791207290681-3fbscpto6rv325is2sk9irt3bn789gee.apps.googleusercontent.com',
-// });
-
 export const LoginScreen = () => {
   const theme = useContext(ThemeContext);
+  const {t} = useTranslation();
   const {isLoading, error, signInWithGoogle} = useContext(AuthContext);
 
   useEffect(() => {
@@ -39,9 +32,9 @@ export const LoginScreen = () => {
       horizontalMargin={null}
       isLoading={isLoading}>
       <Wrapper>
-        <AppTitle>EyePax News</AppTitle>
+        <AppTitle>{t('commonScope.appName')}</AppTitle>
 
-        <SignInLabel>Sign in with google for EyePax News</SignInLabel>
+        <SignInLabel>{t('authScope.signInWithGoogle')}</SignInLabel>
         <AuthButton
           size={GoogleSigninButton.Size.Standard}
           color={GoogleSigninButton.Color.Light}

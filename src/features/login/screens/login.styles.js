@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components/native';
 
 import {GoogleSigninButton} from '@react-native-google-signin/google-signin';

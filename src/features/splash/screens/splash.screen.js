@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useContext, useEffect} from 'react';
 import {ThemeContext} from 'styled-components/native';
+import {useTranslation} from 'react-i18next';
 
 import {Screen} from '../../../components/screen/screen.component';
 
@@ -9,6 +10,7 @@ import {AuthContext} from '../../../contexts/auth.context';
 
 export const SplashScreen = () => {
   const theme = useContext(ThemeContext);
+  const {t} = useTranslation();
   const {requestToValidateUser} = useContext(AuthContext);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ export const SplashScreen = () => {
 
   return (
     <Screen bgColor={theme.colors.brand.primary} horizontalMargin={null}>
-      <AppTitle>EyePax News</AppTitle>
+      <AppTitle>{t('commonScope.appName')}</AppTitle>
     </Screen>
   );
 };
