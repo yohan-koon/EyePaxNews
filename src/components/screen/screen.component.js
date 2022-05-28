@@ -1,5 +1,6 @@
 import React from 'react';
 import {RefreshControl} from 'react-native';
+import {Loader} from '../loader/loader.component';
 import {
   ScreenContainer,
   SafeAreaScreenContainer,
@@ -14,6 +15,7 @@ export const Screen = ({
   isRefreshing = false,
   onRefresh,
   children,
+  isLoading = false,
 }) => {
   const renderChildren = () => {
     if (isScrollable) {
@@ -23,6 +25,7 @@ export const Screen = ({
             <RefreshControl refreshing={isRefreshing} onRefresh={onRefresh} />
           }>
           {children}
+          <Loader isLoading={isLoading} />
         </ScreenScrollView>
       );
     } else {
@@ -35,12 +38,14 @@ export const Screen = ({
         bgColor={bgColor}
         horizontalMargin={horizontalMargin}>
         {renderChildren()}
+        <Loader isLoading={isLoading} />
       </SafeAreaScreenContainer>
     );
   }
   return (
     <ScreenContainer bgColor={bgColor} horizontalMargin={horizontalMargin}>
       {renderChildren()}
+      <Loader isLoading={isLoading} />
     </ScreenContainer>
   );
 };

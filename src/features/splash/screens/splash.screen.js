@@ -2,19 +2,18 @@
 import React, {useContext, useEffect} from 'react';
 import {ThemeContext} from 'styled-components/native';
 
-import {NavigationContext} from '../../../contexts/navigation.context';
 import {Screen} from '../../../components/screen/screen.component';
-import {NavigationStatus} from '../../../enums/navigation-status.enum';
 
 import {AppTitle} from './splash.styles';
+import {AuthContext} from '../../../contexts/auth.context';
 
 export const SplashScreen = () => {
   const theme = useContext(ThemeContext);
-  const {onNavigationStausChange} = useContext(NavigationContext);
+  const {requestToValidateUser} = useContext(AuthContext);
 
   useEffect(() => {
-    setTimeout(() => {
-      onNavigationStausChange(NavigationStatus.NotAuthenticatd);
+    setTimeout(async () => {
+      await requestToValidateUser();
     }, 2000);
   }, []);
 

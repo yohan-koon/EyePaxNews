@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "791207290681",
+    "project_id": "eyepaxnews",
+    "storage_bucket": "eyepaxnews.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791207290681:android:b1654099b69765a534aae8",
+        "android_client_info": {
+          "package_name": "com.eyepaxnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791207290681-1k5jsv5l95ab0pdks3sllt3vel1bn37i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eyepaxnews",
+            "certificate_hash": "c25b59646766f145c31b23af4d242c5c5094e584"
+          }
+        },
+        {
+          "client_id": "791207290681-j3agranc4d2uol1va5p03gmmrht7nfds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eyepaxnews",
+            "certificate_hash": "dcabc4bdf7c6f146ea82009e7695b0ff82ddf959"
+          }
+        },
+        {
+          "client_id": "791207290681-3fbscpto6rv325is2sk9irt3bn789gee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCVJJMjT8H0Wq7Z6TPKdm6uZ7QNGiawLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791207290681-3fbscpto6rv325is2sk9irt3bn789gee.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791207290681-le69j0stf5vas1t3p8fdtqe1b0ikgo9e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eyepax.news"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
