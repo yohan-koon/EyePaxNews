@@ -10,8 +10,12 @@ import {NewsContext} from '../../../contexts/news.context';
 import {Spacer} from '../../../components/spacer/spacer.component';
 
 export const HomeScreen = ({navigation}) => {
-  const {isNotificationReceived, getLatestNews, getAllNews} =
-    useContext(NewsContext);
+  const {
+    isNotificationReceived,
+    getLatestNews,
+    getAllNews,
+    onChangeSearchKeyword,
+  } = useContext(NewsContext);
 
   useEffect(() => {
     getLatestNews();
@@ -23,6 +27,8 @@ export const HomeScreen = ({navigation}) => {
     if (text == null || text == '') {
       return;
     }
+    onChangeSearchKeyword(text);
+    getAllNews();
     navigation.navigate('Search', {searchKeyword: text});
   };
   return (

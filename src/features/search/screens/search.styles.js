@@ -5,6 +5,4 @@ export const NewsCategoryWrapper = styled.View`
   flex-direction: row;
 `;
 
-export const FilterButton = styled(BarButton)`
-  
-`;
+export const FilterButton = styled(BarButton)``;

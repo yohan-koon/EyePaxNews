@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {CircleButton} from '../../../../components/circle-button/circle-button.component';
 import {SearchBar} from '../../../../components/search-bar/search-bar.component';
 import {Spacer} from '../../../../components/spacer/spacer.component';
@@ -9,6 +9,7 @@ import {Container} from './search-bar-section.styles';
 import {SquareButton} from '../../../../components/square-button/square-button.component';
 
 import backIcon from '../../../../../assets/svgs/back';
+import {NewsContext} from '../../../../contexts/news.context';
 
 export const SearchBarSection = ({
   isNotificationReceived,
@@ -16,6 +17,7 @@ export const SearchBarSection = ({
   onPressSuffix,
   onPressPrefix,
 }) => {
+  const {searchKeyword} = useContext(NewsContext);
   return (
     <Container>
       {onPressPrefix && (
@@ -28,7 +30,10 @@ export const SearchBarSection = ({
           />
         </Spacer>
       )}
-      <SearchBar onPressSearch={text => onPressSearch(text)} />
+      <SearchBar
+        onPressSearch={text => onPressSearch(text)}
+        initialValue={searchKeyword}
+      />
       {onPressSuffix && (
         <Spacer size="large" position="left">
           <CircleButton

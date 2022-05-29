@@ -1,7 +1,9 @@
 {
   "commonScope": {
     "appName": "EyePax News",
-    "publishedBy": "Published by"
+    "publishedBy": "Published by",
+    "save": "Save",
+    "reset": "Reset"
   },
   "authScope": {
     "signInWithGoogle": "Sign in with google for EyePax News"
@@ -21,6 +23,7 @@
     "title": "Hot Updates"
   },
   "searchScope": {
-    "filter": "Filter"
+    "filter": "Filter",
+    "sortBy": "Sort By"
   }
 }

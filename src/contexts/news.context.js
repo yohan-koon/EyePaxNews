@@ -1,6 +1,7 @@
 import React, {createContext, useState, useContext} from 'react';
 
 import {newsCategoriesMock} from '../features/home/components/news-category-section/news-category-section.mock';
+import {sortByOptions} from '../features/search/components/filter/filter.mock';
 import {fetchLatestNews, fetchAllNews} from '../services/news.service';
 
 export const NewsContext = createContext();
@@ -25,6 +26,17 @@ export const NewsContextProvider = ({children}) => {
   const [allNews, setAllNews] = useState([]);
   const [page, setPage] = useState(0);
 
+  // HANDLE SORY BY OPTION
+  const [selectedSortByOption, setSelectedSortByOption] = useState(
+    sortByOptions[0],
+  );
+
+  const [searchKeyword, setSearchKeyword] = useState('');
+
+  const onChangeSearchKeyword = text => {
+    setSearchKeyword(text);
+  };
+
   const getLatestNews = async () => {
     try {
       const response = await fetchLatestNews({
@@ -44,7 +56,10 @@ export const NewsContextProvider = ({children}) => {
 
   const onChangeNewsCategory = newsCategory => {
     setSelectedNewsCategory(newsCategory);
+    setLatestNews([]);
     getLatestNews();
+    setAllNews([]);
+    getAllNews();
   };
 
   const getAllNews = async () => {
@@ -52,7 +67,11 @@ export const NewsContextProvider = ({children}) => {
       console.log('getAllNews');
       const nextPage = page + 1;
       setPage(nextPage);
-      const response = await fetchAllNews({page: nextPage});
+      const response = await fetchAllNews({
+        page: nextPage,
+        sortBy: selectedSortByOption.key,
+        searchKeyword: searchKeyword,
+      });
       console.log(response);
       if (response) {
         if (page === 1) {
@@ -69,6 +88,27 @@ export const NewsContextProvider = ({children}) => {
     }
   };
 
+  const onChangeSelectedSortByOption = sortBy => {
+    setSelectedSortByOption(sortBy);
+    setAllNews([]);
+  };
+
+  const resetGetAllNews = () => {
+    setIsLoadingGetAllNews(false);
+    setAllNewsLoadingError(null);
+    setAllNews([]);
+    setPage(0);
+    setSelectedNewsCategory(newsCategoriesMock[0]);
+    setSelectedSortByOption(sortByOptions[0]);
+  };
+
+  const resetGetLatestNews = () => {
+    setIsLoadingGetLatestNews(false);
+    setLatestNewsLoadingError(null);
+    setLatestNews([]);
+    setSelectedNewsCategory(newsCategoriesMock[0]);
+  };
+
   return (
     <NewsContext.Provider
       value={{
@@ -83,6 +123,12 @@ export const NewsContextProvider = ({children}) => {
         allNewsLoadingError,
         allNews,
         getAllNews,
+        selectedSortByOption,
+        onChangeSelectedSortByOption,
+        resetGetAllNews,
+        resetGetLatestNews,
+        searchKeyword,
+        onChangeSearchKeyword,
       }}>
       {children}
     </NewsContext.Provider>

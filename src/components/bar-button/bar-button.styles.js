@@ -10,6 +10,11 @@ const textColorVariant = {
   secondary: props => props.theme.colors.text.primary,
 };
 
+const borderColorVariant = {
+  primary: props => props.theme.colors.ui.primary,
+  secondary: props => props.theme.colors.ui.border,
+};
+
 export const BarButtonContainer = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
@@ -19,6 +24,8 @@ export const BarButtonContainer = styled.TouchableOpacity`
   padding-right: ${({size}) => size / 2}px;
   height: ${({size}) => size}px;
   border-radius: ${({size}) => size / 2}px;
+  border-width: 1px;
+  border-color: ${({variant}) => borderColorVariant[variant]};
 `;
 
 export const Title = styled.Text`

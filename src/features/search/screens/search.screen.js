@@ -1,6 +1,6 @@
-import React, {useContext, useEffect} from 'react';
-import {View, Text} from 'react-native';
+import React, {useContext, useEffect, useRef} from 'react';
 import {useTranslation} from 'react-i18next';
+import RBSheet from 'react-native-raw-bottom-sheet';
 
 import {Screen} from '../../../components/screen/screen.component';
 import {SearchBarSection} from '../../home/components/search-bar-section/search-bar-section.component';
@@ -11,22 +11,39 @@ import {Spacer} from '../../../components/spacer/spacer.component';
 
 import {NewsCategoryWrapper, FilterButton} from './search.styles';
 import filterIcon from '../../../../assets/svgs/filter';
+import {Fitler} from '../components/filter/filter.component';
 
 export const SearchScreen = ({navigation}) => {
   const {t} = useTranslation();
-  const {isNotificationReceived, getLatestNews, getAllNews} =
-    useContext(NewsContext);
+  const bottomSheetRef = useRef(null);
+  const {
+    isNotificationReceived,
+    getLatestNews,
+    getAllNews,
+    resetGetAllNews,
+    onChangeSearchKeyword,
+  } = useContext(NewsContext);
 
   useEffect(() => {
     getLatestNews();
     getAllNews();
   }, []);
+
+  const onPressSearch = text => {
+    console.log(text);
+    if (text == null || text == '') {
+      return;
+    }
+    onChangeSearchKeyword(text);
+    getAllNews();
+  };
   return (
     <Screen>
       <Spacer position="top" size="large">
         <SearchBarSection
           isNotificationReceived={isNotificationReceived}
           onPressPrefix={() => navigation.goBack()}
+          onPressSearch={() => onPressSearch}
         />
       </Spacer>
       <Spacer position="top" size="large">
@@ -36,6 +53,7 @@ export const SearchScreen = ({navigation}) => {
               size={32}
               title={t('searchScope.filter')}
               prefixSource={filterIcon}
+              onTap={() => bottomSheetRef.current.open()}
             />
           </Spacer>
           <NewsCategorySection />
@@ -44,6 +62,17 @@ export const SearchScreen = ({navigation}) => {
       <Spacer position="top" size="large">
         <NewsSection navigation={navigation} />
       </Spacer>
+      <RBSheet ref={bottomSheetRef} height={300} openDuration={250}>
+        <Fitler
+          onPressReset={() => {
+            resetGetAllNews();
+          }}
+          onPressSave={() => {
+            bottomSheetRef.current.close();
+            getAllNews();
+          }}
+        />
+      </RBSheet>
     </Screen>
   );
 };
