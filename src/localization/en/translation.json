@@ -9,5 +9,9 @@
     "home": "HOME",
     "favourite": "FAVOURITE",
     "profile": "PROFILE"
+  },
+  "newsScope": {
+    "latestNewsTitle": "Latest News",
+    "seeAll": "See All"
   }
 }

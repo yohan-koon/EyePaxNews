@@ -9,8 +9,3 @@ export const Container = styled.TouchableOpacity`
   align-items: center;
   border-radius: ${({size}) => size / 2}px; ;
 `;
-
-export const Icon = styled.Image`
-  width: ${({size}) => size / 2}px;
-  height: ${({size}) => size / 2}px;
-`;

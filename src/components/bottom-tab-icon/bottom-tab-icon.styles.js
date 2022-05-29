@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   align-items: center;
   justify-content: center;
-  top: 14px;
+  top: ${({isAndroid}) => (isAndroid ? 0 : 14)}px;
 `;
 
 export const TabIcon = styled.Image`

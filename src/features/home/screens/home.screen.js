@@ -7,13 +7,18 @@ import {LatestNewsSection} from '../components/latest-news-section/latest-news-s
 import {NewsCategorySection} from '../components/news-category-section/news-category-section.component';
 import {NewsSection} from '../components/news-section/news-section.component';
 import {NewsContext} from '../../../contexts/news.context';
+import {Spacer} from '../../../components/spacer/spacer.component';
 
 export const HomeScreen = () => {
   const {isNotificationReceived} = useContext(NewsContext);
   return (
     <Screen>
-      <SearchBarSection isNotificationReceived={isNotificationReceived} />
-      <LatestNewsSection />
+      <Spacer position="top" size="large">
+        <SearchBarSection isNotificationReceived={isNotificationReceived} />
+      </Spacer>
+      <Spacer position="top" size="large">
+        <LatestNewsSection />
+      </Spacer>
       <NewsCategorySection />
       <NewsSection />
     </Screen>

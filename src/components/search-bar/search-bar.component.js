@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import {TouchableOpacity} from 'react-native';
-import {Container, TextField, SearchIcon} from './search-bar.styles';
+import {SvgXml} from 'react-native-svg';
+import {Container, TextField} from './search-bar.styles';
 
-export const SearchBar = ({height = 48, onPressSearch}) => {
+import searchIcon from '../../../assets/svgs/search';
+
+export const SearchBar = ({height = 36, onPressSearch}) => {
   const [text, onChangeText] = useState(null);
   return (
     <Container height={height}>
       <TextField onChangeText={onChangeText} value={text} height={height} />
-      <TouchableOpacity onPress={onPressSearch}>
-        <SearchIcon
-          source={require('../../../assets/icons/search.png')}
-          height={height}
-        />
+      <TouchableOpacity onPress={() => onPressSearch(text)}>
+        <SvgXml xml={searchIcon} height={height / 2} width={height / 2} />
       </TouchableOpacity>
     </Container>
   );
