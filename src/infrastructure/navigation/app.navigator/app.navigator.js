@@ -5,7 +5,7 @@ const Tab = createBottomTabNavigator();
 
 import {BottomTabIcon} from '../../../components/bottom-tab-icon/bottom-tab-icon.component';
 
-import {HomeScreen} from '../../../features/home/screens/home.screen';
+import { HomeNavigator } from '../home.navigator/home.navigator';
 import {ProfileScreen} from '../../../features/profile/screens/profile.screen';
 import {FavouriteScreen} from '../../../features/favourite/screens/favourite.screen';
 
@@ -21,8 +21,8 @@ export const AppNavigator = () => {
         tabBarStyle: {...styles.tabBarStyle, ...styles.shadow},
       }}>
       <Tab.Screen
-        name="Home"
-        component={HomeScreen}
+        name="HomeTab"
+        component={HomeNavigator}
         options={{
           tabBarIcon: ({focused}) => (
             <BottomTabIcon
@@ -34,7 +34,7 @@ export const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Favourite"
+        name="FavouriteTab"
         component={FavouriteScreen}
         options={{
           tabBarIcon: ({focused}) => (
@@ -47,7 +47,7 @@ export const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="ProfileTab"
         component={ProfileScreen}
         options={{
           tabBarIcon: ({focused}) => (

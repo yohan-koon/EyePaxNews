@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {View, Text} from 'react-native';
 
 import {Screen} from '../../../components/screen/screen.component';
@@ -10,7 +10,13 @@ import {NewsContext} from '../../../contexts/news.context';
 import {Spacer} from '../../../components/spacer/spacer.component';
 
 export const HomeScreen = () => {
-  const {isNotificationReceived} = useContext(NewsContext);
+  const {isNotificationReceived, getLatestNews, getAllNews} =
+    useContext(NewsContext);
+
+  useEffect(() => {
+    getLatestNews();
+    getAllNews();
+  }, []);
   return (
     <Screen>
       <Spacer position="top" size="large">
@@ -19,8 +25,12 @@ export const HomeScreen = () => {
       <Spacer position="top" size="large">
         <LatestNewsSection />
       </Spacer>
-      <NewsCategorySection />
-      <NewsSection />
+      <Spacer position="top" size="large">
+        <NewsCategorySection />
+      </Spacer>
+      <Spacer position="top" size="large">
+        <NewsSection />
+      </Spacer>
     </Screen>
   );
 };

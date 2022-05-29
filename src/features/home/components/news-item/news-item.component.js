@@ -1,21 +1,21 @@
 import React from 'react';
 import {useWindowDimensions} from 'react-native';
-import {useTranslation} from 'react-i18next';
+import {getDisplayDate} from '../../../../utils/date/date.utils';
 import {
   Container,
   ContainerCover,
   Author,
   NewsTitle,
-  NewsDescription,
+  NewsCreatedDate,
   ContentContainer,
   HeaderContentContainer,
-} from './latest-news-item.styles';
+  FooterContentContainer,
+} from './news-item.styles';
 
-export const LatestNewsItem = ({data, onPress}) => {
-  const {t} = useTranslation();
+export const NewsItem = ({data, onPress}) => {
   const {height, width} = useWindowDimensions();
-  const conainerHeight = height * (2 / 7);
-  const {author, title, description, urlToImage} = data;
+  const conainerHeight = height * (1 / 7);
+  const {author, title, publishedAt, urlToImage} = data;
 
   return (
     <Container
@@ -28,13 +28,12 @@ export const LatestNewsItem = ({data, onPress}) => {
         height={conainerHeight}>
         <ContentContainer height={conainerHeight}>
           <HeaderContentContainer>
-            <Author>
-              {t('newsScope.by')} {author}
-            </Author>
             <NewsTitle>{title}</NewsTitle>
           </HeaderContentContainer>
-
-          <NewsDescription>{description}</NewsDescription>
+          <FooterContentContainer>
+            <Author>{author}</Author>
+            <NewsCreatedDate>{getDisplayDate(publishedAt)}</NewsCreatedDate>
+          </FooterContentContainer>
         </ContentContainer>
       </ContainerCover>
     </Container>

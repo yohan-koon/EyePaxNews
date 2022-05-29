@@ -12,6 +12,7 @@
   },
   "newsScope": {
     "latestNewsTitle": "Latest News",
-    "seeAll": "See All"
+    "seeAll": "See All",
+    "by": "by"
   }
 }

@@ -30,13 +30,13 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <NewsContextProvider>
-          <NavigationContextProvider>
+        <NavigationContextProvider>
+          <NewsContextProvider>
             <AuthContextProvider>
               <Navigation />
             </AuthContextProvider>
-          </NavigationContextProvider>
-        </NewsContextProvider>
+          </NewsContextProvider>
+        </NavigationContextProvider>
       </ThemeProvider>
     </>
   );
