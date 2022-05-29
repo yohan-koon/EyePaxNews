@@ -14,6 +14,7 @@ export const colors = {
     disabled: palatte.white,
     error: palatte.red,
     success: palatte.blue,
+    border: palatte.lightGray,
   },
   bg: {
     primary: palatte.white,
@@ -27,5 +28,6 @@ export const colors = {
     inverse: palatte.white,
     error: palatte.red,
     success: palatte.blue,
+    dark: palatte.darkSienna,
   },
 };
