@@ -5,7 +5,7 @@ const Tab = createBottomTabNavigator();
 
 import {BottomTabIcon} from '../../../components/bottom-tab-icon/bottom-tab-icon.component';
 
-import { HomeNavigator } from '../home.navigator/home.navigator';
+import {HomeNavigator} from '../home.navigator/home.navigator';
 import {ProfileScreen} from '../../../features/profile/screens/profile.screen';
 import {FavouriteScreen} from '../../../features/favourite/screens/favourite.screen';
 

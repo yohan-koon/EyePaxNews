@@ -1,12 +1,11 @@
 import React from 'react';
-import {
-  createNativeStackNavigator,
-  TransitionPresets,
-} from '@react-navigation/stack';
-const Stack = createNativeStackNavigator();
+import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
+const Stack = createStackNavigator();
 
 import {HomeScreen} from '../../../features/home/screens/home.screen';
 import {NewsDetailScreen} from '../../../features/news-detail/news-detail.screen';
+import {HotUpdatesScreen} from '../../../features/hot-updates/screens/hot-updates.screen';
+import {SearchScreen} from '../../../features/search/screens/search.screen';
 
 export const HomeNavigator = () => {
   return (
@@ -18,8 +17,10 @@ export const HomeNavigator = () => {
       <Stack.Screen
         name="NewsDetail"
         component={NewsDetailScreen}
-        options={{...TransitionPresets.ModalPresentationIOS}}
+        options={{}}
       />
+      <Stack.Screen name="HotUpdates" component={HotUpdatesScreen} />
+      <Stack.Screen name="Search" component={SearchScreen} />
     </Stack.Navigator>
   );
 };

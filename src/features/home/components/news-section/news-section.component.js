@@ -9,7 +9,7 @@ import {Container, NewsList, ItemSeperator} from './news-section.styles';
 import {Spacer} from '../../../../components/spacer/spacer.component';
 import {NewsContext} from '../../../../contexts/news.context';
 
-export const NewsSection = ({}) => {
+export const NewsSection = ({navigation}) => {
   const {t} = useTranslation();
   const {isLoadingGetAllNews, allNewsLoadingError, allNews, getAllNews} =
     useContext(NewsContext);
@@ -31,7 +31,12 @@ export const NewsSection = ({}) => {
       <Spacer position="top" size="medium">
         <NewsList
           data={allNews}
-          renderItem={({item}) => <NewsItem data={item} />}
+          renderItem={({item}) => (
+            <NewsItem
+              data={item}
+              onPress={data => navigation.navigate('NewsDetail', {news: data})}
+            />
+          )}
           keyExtractor={item => item.url}
           ItemSeparatorComponent={() => <ItemSeperator />}
           showsHorizontalScrollIndicator={false}

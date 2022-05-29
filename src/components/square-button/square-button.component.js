@@ -1,9 +1,9 @@
 import React from 'react';
 import {SvgXml} from 'react-native-svg';
 
-import {Container} from './circle-button.styles';
+import {Container} from './square-button.styles';
 
-export const CircleButton = ({
+export const SquareButton = ({
   onPress,
   size = 48,
   backgroundColor,
@@ -11,13 +11,15 @@ export const CircleButton = ({
   imageSource,
   activeImageSource,
   style,
+  opacity = 1,
 }) => {
   return (
     <Container
       size={size}
       onPress={onPress}
       backgroundColor={backgroundColor}
-      style={style}>
+      style={style}
+      opacity={opacity}>
       <SvgXml
         xml={isActive ? activeImageSource : imageSource}
         width={size / 2}

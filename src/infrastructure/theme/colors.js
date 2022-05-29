@@ -28,5 +28,6 @@ export const colors = {
     inverse: palatte.white,
     error: palatte.red,
     success: palatte.blue,
+    dark: palatte.darkSienna,
   },
 };

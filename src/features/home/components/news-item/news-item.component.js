@@ -28,7 +28,9 @@ export const NewsItem = ({data, onPress}) => {
         height={conainerHeight}>
         <ContentContainer height={conainerHeight}>
           <HeaderContentContainer>
-            <NewsTitle>{title}</NewsTitle>
+            <NewsTitle numberOfLines={3} ellipsizeMode="tail">
+              {title}
+            </NewsTitle>
           </HeaderContentContainer>
           <FooterContentContainer>
             <Author>{author}</Author>

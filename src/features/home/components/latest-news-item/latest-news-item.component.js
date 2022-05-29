@@ -31,10 +31,14 @@ export const LatestNewsItem = ({data, onPress}) => {
             <Author>
               {t('newsScope.by')} {author}
             </Author>
-            <NewsTitle>{title}</NewsTitle>
+            <NewsTitle numberOfLines={3} ellipsizeMode="tail">
+              {title}
+            </NewsTitle>
           </HeaderContentContainer>
 
-          <NewsDescription>{description}</NewsDescription>
+          <NewsDescription numberOfLines={2} ellipsizeMode="tail">
+            {description}
+          </NewsDescription>
         </ContentContainer>
       </ContainerCover>
     </Container>

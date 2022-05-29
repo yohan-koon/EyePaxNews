@@ -1,6 +1,7 @@
 {
   "commonScope": {
-    "appName": "EyePax News"
+    "appName": "EyePax News",
+    "publishedBy": "Published by"
   },
   "authScope": {
     "signInWithGoogle": "Sign in with google for EyePax News"
@@ -13,6 +14,13 @@
   "newsScope": {
     "latestNewsTitle": "Latest News",
     "seeAll": "See All",
-    "by": "by"
+    "by": "by",
+    "publishedBy": "Published by"
+  },
+  "hotUpdates": {
+    "title": "Hot Updates"
+  },
+  "searchScope": {
+    "filter": "Filter"
   }
 }

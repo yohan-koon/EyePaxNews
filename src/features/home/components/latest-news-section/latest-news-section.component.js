@@ -1,7 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import {useTranslation} from 'react-i18next';
 import Snackbar from 'react-native-snackbar';
-
 import {LinkButton} from '../../../../components/link-button/link-button.component';
 import {LatestNewsItem} from '../latest-news-item/latest-news-item.component';
 import {
@@ -16,7 +15,7 @@ import rightArrow from '../../../../../assets/svgs/right-arrow';
 import {Spacer} from '../../../../components/spacer/spacer.component';
 import {NewsContext} from '../../../../contexts/news.context';
 
-export const LatestNewsSection = ({}) => {
+export const LatestNewsSection = ({navigation}) => {
   const {t} = useTranslation();
   const {isLoadingGetLatestNews, latestNewsLoadingError, latestNews} =
     useContext(NewsContext);
@@ -37,12 +36,21 @@ export const LatestNewsSection = ({}) => {
     <Container>
       <Header>
         <Title>{t('newsScope.latestNewsTitle')}</Title>
-        <LinkButton suffixImage={rightArrow} title={t('newsScope.seeAll')} />
+        <LinkButton
+          suffixImage={rightArrow}
+          title={t('newsScope.seeAll')}
+          onPress={() => navigation.navigate('HotUpdates')}
+        />
       </Header>
       <Spacer position="top" size="medium">
         <LatestNewsList
           data={latestNews}
-          renderItem={({item}) => <LatestNewsItem data={item} />}
+          renderItem={({item}) => (
+            <LatestNewsItem
+              data={item}
+              onPress={data => navigation.navigate('NewsDetail', {news: data})}
+            />
+          )}
           keyExtractor={item => item.url}
           horizontal
           ItemSeparatorComponent={() => <ItemSeperator />}

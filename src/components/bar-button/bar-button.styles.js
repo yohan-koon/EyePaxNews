@@ -11,6 +11,7 @@ const textColorVariant = {
 };
 
 export const BarButtonContainer = styled.TouchableOpacity`
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: ${({variant}) => bgVariant[variant]};
@@ -26,4 +27,6 @@ export const Title = styled.Text`
   font-weight: ${({theme, size}) =>
     size > 32 ? theme.fontWeights.bold : theme.fontWeights.medium};
   font-size: ${({size}) => size * (3 / 8)};
+  margin-left: ${({size, prefixSource}) => (prefixSource ? size / 4 : 0)}px;
+  margin-right: ${({size, suffixSource}) => (suffixSource ? size / 4 : 0)}px;
 `;

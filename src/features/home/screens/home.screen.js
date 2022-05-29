@@ -9,7 +9,7 @@ import {NewsSection} from '../components/news-section/news-section.component';
 import {NewsContext} from '../../../contexts/news.context';
 import {Spacer} from '../../../components/spacer/spacer.component';
 
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}) => {
   const {isNotificationReceived, getLatestNews, getAllNews} =
     useContext(NewsContext);
 
@@ -17,19 +17,31 @@ export const HomeScreen = () => {
     getLatestNews();
     getAllNews();
   }, []);
+
+  const onPressSearch = text => {
+    console.log(text);
+    if (text == null || text == '') {
+      return;
+    }
+    navigation.navigate('Search', {searchKeyword: text});
+  };
   return (
     <Screen>
       <Spacer position="top" size="large">
-        <SearchBarSection isNotificationReceived={isNotificationReceived} />
+        <SearchBarSection
+          isNotificationReceived={isNotificationReceived}
+          onPressSearch={onPressSearch}
+          onPressSuffix={() => {}}
+        />
       </Spacer>
       <Spacer position="top" size="large">
-        <LatestNewsSection />
+        <LatestNewsSection navigation={navigation} />
       </Spacer>
       <Spacer position="top" size="large">
         <NewsCategorySection />
       </Spacer>
       <Spacer position="top" size="large">
-        <NewsSection />
+        <NewsSection navigation={navigation} />
       </Spacer>
     </Screen>
   );

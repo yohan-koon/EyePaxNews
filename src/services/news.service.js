@@ -18,7 +18,7 @@ export const fetchLatestNews = async ({category}) => {
 export const fetchAllNews = async ({page, pageSize = 10}) => {
   try {
     const response = await axiosInstance.get(
-      `${ALL_NEWS}?pageSize=${pageSize}&page=${page}&language=en&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`,
+      `${ALL_NEWS}?q=usa&pageSize=${pageSize}&page=${page}&language=en&sortBy=publishedAt&apiKey=${NEWS_API_KEY}`,
     );
     if (response.data != null && response.status === 200) {
       return response.data.articles;
