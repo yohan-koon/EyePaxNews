@@ -38,6 +38,7 @@
 
 ## PROJECT SETUP
     -   Get project from repository
+    -   Access the code inside `master` branch
     -   Install dependencies    -   `yarn install`
     -   Pod installation -   `npx pod-install ios`
     -   RUN ANDROID   -   `yarn android`
