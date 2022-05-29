@@ -1,0 +1,29 @@
+{
+  "commonScope": {
+    "appName": "EyePax News",
+    "publishedBy": "Published by",
+    "save": "Save",
+    "reset": "Reset"
+  },
+  "authScope": {
+    "signInWithGoogle": "Sign in with google for EyePax News"
+  },
+  "bottomTabScope": {
+    "home": "HOME",
+    "favourite": "FAVOURITE",
+    "profile": "PROFILE"
+  },
+  "newsScope": {
+    "latestNewsTitle": "Latest News",
+    "seeAll": "See All",
+    "by": "by",
+    "publishedBy": "Published by"
+  },
+  "hotUpdates": {
+    "title": "Hot Updates"
+  },
+  "searchScope": {
+    "filter": "Filter",
+    "sortBy": "Sort By"
+  }
+}
