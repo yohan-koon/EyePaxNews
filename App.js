@@ -7,106 +7,39 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {Navigation} from './src/infrastructure/navigation';
+import {ThemeProvider} from 'styled-components/native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import {NavigationContextProvider} from './src/contexts/navigation.context';
+import {AuthContextProvider} from './src/contexts/auth.context';
+import {NewsContextProvider} from './src/contexts/news.context';
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+import {isAndroid} from './src/utils/platform/platform.utils';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+import {theme} from './src/infrastructure/theme';
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+GoogleSignin.configure({
+  webClientId: isAndroid()
+    ? '791207290681-3fbscpto6rv325is2sk9irt3bn789gee.apps.googleusercontent.com'
+    : '791207290681-le69j0stf5vas1t3p8fdtqe1b0ikgo9e.apps.googleusercontent.com',
 });
+
+const App = () => {
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <NavigationContextProvider>
+          <NewsContextProvider>
+            <AuthContextProvider>
+              <Navigation />
+            </AuthContextProvider>
+          </NewsContextProvider>
+        </NavigationContextProvider>
+      </ThemeProvider>
+    </>
+  );
+};
 
 export default App;
