@@ -14,6 +14,7 @@ export const colors = {
     disabled: palatte.white,
     error: palatte.red,
     success: palatte.blue,
+    border: palatte.lightGray,
   },
   bg: {
     primary: palatte.white,

@@ -14,6 +14,7 @@ import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
 import {NavigationContextProvider} from './src/contexts/navigation.context';
 import {AuthContextProvider} from './src/contexts/auth.context';
+import {NewsContextProvider} from './src/contexts/news.context';
 
 import {isAndroid} from './src/utils/platform/platform.utils';
 
@@ -29,11 +30,13 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <NavigationContextProvider>
-          <AuthContextProvider>
-            <Navigation />
-          </AuthContextProvider>
-        </NavigationContextProvider>
+        <NewsContextProvider>
+          <NavigationContextProvider>
+            <AuthContextProvider>
+              <Navigation />
+            </AuthContextProvider>
+          </NavigationContextProvider>
+        </NewsContextProvider>
       </ThemeProvider>
     </>
   );

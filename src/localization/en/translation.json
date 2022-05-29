@@ -1,8 +1,13 @@
 {
   "commonScope": {
-      "appName": "EyePax News"
+    "appName": "EyePax News"
   },
   "authScope": {
-      "signInWithGoogle": "Sign in with google for EyePax News"
+    "signInWithGoogle": "Sign in with google for EyePax News"
+  },
+  "bottomTabScope": {
+    "home": "HOME",
+    "favourite": "FAVOURITE",
+    "profile": "PROFILE"
   }
 }

@@ -5,4 +5,5 @@ export const palatte = {
   white: '#FFFFFF',
   black: '#000000',
   gray: '#A6A6A6',
+  lightGray: '#D3D3D3',
 };
